@@ -22,11 +22,14 @@ Required
 Required
 
 #### name
-    name: [ example.net, www.example.net ]
+> Syntax: `name: [ `*`server_name`*`, ... ]`
+> Default: `name: [ `**`$id`**` ]`
+> Example: `name: [ example.net, www.example.net ]`
+
 
 A list of exact names, wildcard names or regular expressions prefixed with `~`.
 Specifies which requests are served using this configuration. Corresponds to
-nginx `server_name` directive.
+nginx [`server_name`][ngx_server_name] directive.
 Optional.
 
 Default: `[ $id ]`
@@ -70,3 +73,5 @@ Default: empty
 
 List of per-location directives.
 
+
+[ngx_server_name]: http://nginx.org/en/docs/http/ngx_http_core_module.html#server_name "Nginx: server_name"
