@@ -22,26 +22,21 @@ Required
 Required
 
 #### name
-> Syntax: `name: [ `*`server_name`*`, ... ]`
-> Default: `name: [ `**`$id`**` ]`
-> Example: `name: [ example.net, www.example.net ]`
+> Syntax: `name: [ `*`server_name`*`, ... ]`  
+> Default: `name: [ `**`$id`**` ]`  
+> Example: `name: [ example.net, www.example.net ]`  
 
 
 A list of exact names, wildcard names or regular expressions prefixed with `~`.
 Specifies which requests are served using this configuration. Corresponds to
 nginx [`server_name`][ngx_server_name] directive.
-Optional.
-
-Default: `[ $id ]`
 
 #### root
     root: /src/www/example.net
 
-Specifies the root directory. Corresponds to nginx `root` directive
-and apaches `DocumentRoot` directive.
+Specifies the root directory. Corresponds to nginx [`root`][ngx_root] directive
+and apaches [`DocumentRoot`][ap_documentroot] directive.
 Optional.
-
-Default: `/var/www/$id`
 
 #### tls
     tls: manual | letsencrypt | none
