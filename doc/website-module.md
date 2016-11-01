@@ -7,19 +7,19 @@ The **website** module manages per-site Nginx configuration
 ## Configuration directives
 
 #### catalog
-    catalog: website
+> Syntax: `catalog: website`  
 
-Required
 
 #### id
-    id: example.net
+> Syntax: `id: `*`website_id`*  
+> Example: `id: example.net`  
 
-Required
 
 #### domain
-    domain: example.net
+> Syntax: `domain: `*`domain_name`*  
+> Example: `domain: example.net`  
+> References: [domain id][brutus_domain_id] 
 
-Required
 
 #### name
 > Syntax: `name: [ `*`server_name`*`, ... ]`  
@@ -70,3 +70,6 @@ List of per-location directives.
 
 
 [ngx_server_name]: http://nginx.org/en/docs/http/ngx_http_core_module.html#server_name "Nginx: server_name"
+[ngx_root]: http://nginx.org/en/docs/http/ngx_http_core_module.html#root "Nginx: root"
+[ap_documentroot]: https://httpd.apache.org/docs/current/mod/core.html#documentroot "Apache: DocumentRoot"
+[brutus_domain_id]: domain-module.md "Brutus: domain id"
